@@ -117,9 +117,9 @@ add_test(
 add_custom_target(coverage
     COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
     COMMAND gcov -b -c ../src/student_evaluation.cpp
-    COMMAND lcov --rc lcov_branch_coverage=1 --directory . --capture --output-file coverage.info
+    COMMAND lcov --rc lcov_branch_coverage=1 --directory "/home/testeur/Projets/testingincpp/build" --capture --output-file coverage.info
     # Extraction uniquement des fichiers se trouvant dans le répertoire src avec un chemin absolu
-    COMMAND lcov --extract coverage.info "${CMAKE_SOURCE_DIR}/src/*" --output-file coverage.info
+    COMMAND lcov --extract coverage.info "/home/testeur/Projets/src/*" --output-file coverage.info
     COMMAND genhtml coverage.info --output-directory coverage_report
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     COMMENT "Generating code coverage report..."
