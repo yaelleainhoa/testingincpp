@@ -32,7 +32,7 @@ INSTANTIATE_TEST_SUITE_P(
         EvaluationParam{20, 49, 'B'}, // 20 + 49 = 69
         // Grade A (70 <= total <= 100)
         EvaluationParam{25, 45, 'A'}, // 25 + 45 = 70
-        EvaluationParam{25, 75, 'A'}  // 25 + 75 = 100
+        EvaluationParam{25, 75, 'A'}, // 25 + 75 = 100
         EvaluationParam{25, 0, 'D'}  // 25 + 0 = 0
     )
 );
